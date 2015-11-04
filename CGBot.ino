@@ -58,8 +58,8 @@ void setup(){
 }
 
 void loop(){  
-  analogWrite(9, 100);
-  analogWrite(6, 100);
+  analogWrite(9, 75);
+  analogWrite(6, 75);
   IRleft = digitalRead(leftIRPin);
   IRright = digitalRead(rightIRPin);
   if( !IRleft && IRright ){
