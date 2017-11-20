@@ -21,8 +21,8 @@ void setup(){
   pinMode(rightIRPin, INPUT);
   pinMode(13, OUTPUT);
   pinMode(7, INPUT_PULLUP);
-  analogWrite(9, 75);
-  analogWrite(10, 75);
+  analogWrite(9,75);
+  analogWrite(10,75);
 }
 
 void loop(){ 
@@ -38,7 +38,7 @@ void loop(){
        {
          stopmotors();
          delay(100);
-         right();
+         turnright();
        }
   }
   else
@@ -100,7 +100,6 @@ void right(){
   digitalWrite(lmotorB, LOW);
   digitalWrite(rmotorA, HIGH);
   digitalWrite(rmotorB, LOW);
-  delay(1000);
 }
 
 void reverse(){
@@ -108,4 +107,12 @@ void reverse(){
   digitalWrite(lmotorB, HIGH);
   digitalWrite(rmotorA, HIGH);
   digitalWrite(rmotorB, LOW);
+}
+
+void turnright(){
+  digitalWrite(lmotorA, HIGH);
+  digitalWrite(lmotorB, LOW);
+  digitalWrite(rmotorA, HIGH);
+  digitalWrite(rmotorB, LOW);
+  delay(1000);
 }
